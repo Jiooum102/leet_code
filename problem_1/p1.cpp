@@ -5,13 +5,13 @@
 using namespace std;
 int main()
 {
-    int Len,Sum;
-    cout << "Nhap do dai mang: ";
+    int Len,Target;
+    cout << "Enter array length: ";
     cin >> Len;
-    cout << "Nhap tong: ";
-    cin >> Sum;
+    cout << "Enter target: ";
+    cin >> Target;
     int Arr[Len];
-    cout << "Nhap cac phan tu: " << endl;
+    cout << "Enter array elements: " << endl;
     for(int i = 0; i < Len; i++)
     {
         cout << "Arr[" << i << "]: ";
@@ -20,10 +20,10 @@ int main()
     map<int, int> Map;
     for(int i = 0; i < Len; i++)
     {
-        int temp = Sum - Arr[i];
+        int temp = Target - Arr[i];
         if(Map.find(temp) != Map.end())
         {
-            cout << "Da tim thay cap so: " << endl;
+            cout << "Found indices of two numbers that have sum of " << Target << ": " << endl;
             cout << "[" << Map[temp] << ", " << i << "]" << endl;
             return 0;
         }
@@ -32,6 +32,6 @@ int main()
             Map[Arr[i]]=i;
         }
     }
-    cout << "Khong tim thay cap so nao co tong bang " << Sum << "." << endl;
+    cout << "Can't find indices of two number that have sum of " << Target << "." << endl;
     return 0;
 }
