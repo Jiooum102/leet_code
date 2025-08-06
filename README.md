@@ -5,16 +5,22 @@ LeetCode
 - GitHub tutorials: https://www.w3schools.com/git/default.asp
 - LeetCode problems: https://leetcode.com/problemset/
 ## Targets:
-1. Learn how to use GitHub for code management,
-2. LeetCode:
 
-Score for each problem level:
-- Easy: 1
-- Medium: 2
-- Hard: 5
+1. Master professional software development workflows using GitHub for version control, collaboration, and code review.
+2. Consistently solve LeetCode problems to sharpen algorithmic thinking and coding skills.
+3. Build a strong habit of daily problem-solving and code submission, aiming for continuous improvement and discipline.
+4. Organize solutions in a structured repository, following best practices for maintainability and teamwork.
+5. Track progress and celebrate milestones to stay motivated and achieve personal and team goals.
 
-Every day you must get 5 scores, by completing LeetCode problems and submit to this repo using git merge.
-Each problem stored in their folder with the name is problem id.
+### Problem Scoring System
+- **Easy:** 1 point
+- **Medium:** 3 points
+- **Hard:** 5 points
+
+### Daily Routine Target
+- Aim to achieve at least 5 points per day by solving LeetCode problems and submitting solutions to this repository.
+- Maintain consistency by committing and merging your work daily.
+- Each solution should be stored in its respective folder, named by problem ID, for easy tracking and review.
 
 ## How to configure and run
 
