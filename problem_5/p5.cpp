@@ -4,27 +4,32 @@
 #include <algorithm>
 #include <string>
 using namespace std;
-int p
 int main()
 {
     string str;
-    int Len;
+    int Len,maxLen = 0;
     cout << "Enter string: ";
     cin >> str;
     Len = str.length();
-    map<char, vector<int>> Map;
-    for (int i = 0; i < Len; i++)
+    for(int i = 0; i < Len; i++)
     {
-        Map[str[i]].push_back(i);
-    }
-    int maxLen = 0,temp;
-    for(const auto& pair : Map)
-    {
-        temp = Map[pair.first].last() - Map[pair.first].front() + 1;
-        if(temp > maxLen)
+        for(int j=Len-1; j >= i+maxLen; j--)
         {
-            maxLen = temp;
+            if(str[i] == str[j])
+            {
+                int k = 0;
+                while(i+k < j-k && str[i+k] == str[j-k])
+                {
+                    k++;
+                }
+                if(i+k >= j-k)
+                {
+                    maxLen = max(maxLen, j-i+1);
+                    break;
+                }
+            }
         }
     }
-
+    cout << "Length of longest palindromic substring: " << maxLen << endl;
+    return 0;
 }
