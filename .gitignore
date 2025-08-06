@@ -39,3 +39,15 @@
 
 # debug information files
 *.dwo
+
+# JetBrains IDEs
+.idea/
+*.iml
+# CLion build output
+cmake-build-*/
+# JetBrains IDE logs
+.idea/**/workspace.xml
+.idea/**/tasks.xml
+.idea/**/usage.statistics.xml
+.idea/**/dictionaries/
+.idea/**/shelf/
