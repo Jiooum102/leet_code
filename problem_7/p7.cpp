@@ -1,28 +1,32 @@
 #include <iostream>
 #include <cmath>
+#include <limits.h>
 using namespace std;
+class Solution {
+public:
+    int reverse(int x) {
+        int tmp = x, rx = 0;
+        while (tmp != 0) {
+            int digit = tmp % 10;
+            if (rx > (INT_MAX) / 10) {
+                return 0; // Handle overflow
+            }
+            if (rx < (INT_MIN) / 10) {
+                return 0; // Handle underflow
+            }
+            rx = rx * 10 + digit;
+            tmp /= 10;
+        }
+        return rx;
+    }
+};
 int main()
 {
-    long long x, s;
+    int x;
     cout << "Enter integer: ";
     cin >> x;
-    if (x < 0)
-        s = -x;
-    else
-        s = x;
-    long long rx = 0;
-    while (s > 0)
-    {
-        rx = rx * 10 + s % 10;
-        s /= 10;
-    }
-    if (x < 0)
-        rx = -rx;
-    if(rx < -pow(2, 31) || rx >= pow(2, 31))
-    {
-        cout << 0 << endl;
-        return 1;
-    }
-    cout << "Reversed integer: " << rx << endl;
+    Solution sol;
+    int result = sol.reverse(x);
+    cout << "Reversed integer: " << result << endl;
     return 0;
 }
