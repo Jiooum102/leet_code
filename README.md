@@ -18,7 +18,7 @@ LeetCode
 - **Hard:** 5 points
 
 ### Daily Routine Target
-- Aim to achieve at least 5 points per day by solving LeetCode problems and submitting solutions to this repository.
+- Aim to achieve at least 8 points per day by solving LeetCode problems and submitting solutions to this repository.
 - Maintain consistency by committing and merging your work daily.
 - Each solution should be stored in its respective folder, named by problem ID, for easy tracking and review.
 
