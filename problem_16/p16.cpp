@@ -9,7 +9,7 @@ public:
     int threeSumClosest(vector<int> &nums, int target)
     {
         sort(nums.begin(), nums.end());
-        long long closestSum = INT_MAX;
+        long long closestSum = INT32_MAX;
         for (int i = 0; i < nums.size() - 2; i++)
         {
             int left = i + 1;
