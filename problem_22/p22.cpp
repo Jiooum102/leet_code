@@ -2,6 +2,7 @@
 #include <string>
 #include <vector>
 #include <algorithm>
+using namespace std;
 class Solution {
 public:
     vector<string> generateParenthesis(int n) {
@@ -23,7 +24,6 @@ private:
         }
     }
 };
-using namespace std;
 int main() {
     Solution sol;
     int n;
