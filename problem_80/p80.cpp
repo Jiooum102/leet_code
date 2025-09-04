@@ -8,17 +8,16 @@ class Solution
 public:
     int removeDuplicates(vector<int> &nums)
     {
-        if (nums.size() <= 2)
-            return nums.size();
-        int count = 2;
-        for (int i = 1; i < nums.size() - 1; i++)
+        int k = 0; // write index
+        int len = nums.size();
+        for (int i = 0; i < len; i++)
         {
-            while (i < nums.size() - 1 && nums[i - 1] == nums[i] && nums[i] == nums[i + 1])
+            if (k < 2 || nums[i] != nums[k - 2])
             {
-                nums.erase(nums.begin() + i);
+                nums[k++] = nums[i];
             }
         }
-        return nums.size();
+        return k;
     }
 };
 int main()
